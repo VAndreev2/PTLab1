@@ -10,7 +10,6 @@ class CalcInfo:
         self.data: DataType = data
         self.rating: RatingType = {}
 
-
     def calc_high_rating(self) -> RatingType:
         high_students = 0
         for key in self.data:
