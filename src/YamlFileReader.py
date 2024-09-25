@@ -30,7 +30,10 @@ class YamlFileReader(DataReader):
                     raise ValueError("Предметы должны быть словарем.")
                 for subj, score in subjects.items():
                     if not isinstance(subj, str) or not isinstance(score, int):
-                        raise ValueError("Предметы должны быть строками, а оценки - целыми числами.")
-                students[student] = [(subj, score) for subj, score in subjects.items()]
+                        raise ValueError(
+                            "Предметы должны быть строками, а оценки - целыми числами."
+                        )
+                students[student] = [(subj, score) 
+                                     for subj, score in subjects.items()]
 
         return students
