@@ -1,0 +1,17 @@
+# Игнорировать папку .idea в корне
+/.idea/
+
+# Игнорировать папку .venv в корне
+/.venv/
+
+# Игнорировать папку .pytest_cache в директории src
+/src/.pytest_cache/
+
+# Игнорировать папку __pycache__ в директории src
+/src/__pycache__/
+
+# Игнорировать папку .pytest_cache в директории test
+/test/.pytest_cache/
+
+# Игнорировать папку __pycache__ в директории test
+/test/__pycache__/
