@@ -26,7 +26,10 @@ class test_YamlFileReader(unittest.TestCase):
         self.assertEqual(result, expected_result)
 
     def test_empty_file(self):
-        with tempfile.NamedTemporaryFile('w', suffix='.yml', delete=False, encoding='utf-8') as temp_file:
+        with tempfile.NamedTemporaryFile('w',
+                                         suffix='.yml',
+                                         delete=False,
+                                         encoding='utf-8') as temp_file:
             temp_file_name = temp_file.name  # Сохраняем имя файла
         with self.assertRaises(ValueError):
             YamlFileReader().read(temp_file_name)
@@ -43,7 +46,10 @@ class test_YamlFileReader(unittest.TestCase):
         ]
 
         # Создание временного файла и запись данных
-        with tempfile.NamedTemporaryFile('w+', suffix='.yml', delete=False, encoding='utf-8') as temp_file:
+        with tempfile.NamedTemporaryFile('w+',
+                                         suffix='.yml',
+                                         delete=False,
+                                         encoding='utf-8') as temp_file:
             yaml.dump(data,
                       temp_file,
                       default_flow_style=False,
@@ -65,7 +71,10 @@ class test_YamlFileReader(unittest.TestCase):
             }
         ]
         # Создание временного файла и запись данных
-        with tempfile.NamedTemporaryFile('w+', suffix='.yml', delete=False, encoding='utf-8') as temp_file:
+        with tempfile.NamedTemporaryFile('w+',
+                                         suffix='.yml',
+                                         delete=False,
+                                         encoding='utf-8') as temp_file:
             yaml.dump(data,
                       temp_file,
                       default_flow_style=False,
