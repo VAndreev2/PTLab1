@@ -97,7 +97,7 @@ class test_YamlFileReader(unittest.TestCase):
         # Создание временного файла и запись данных
         with tempfile.NamedTemporaryFile('w+',
                                          suffix='.yml',
-                                         delete=False, 
+                                         delete=False,
                                          encoding='utf-8') as temp_file:
             yaml.dump(data, temp_file,
                       default_flow_style=False,
