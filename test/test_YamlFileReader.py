@@ -8,6 +8,7 @@ import yaml
 sys.path.insert(1, os.path.join(sys.path[0], '../src'))  # noqa: E402
 from YamlFileReader import YamlFileReader
 
+
 class test_YamlFileReader(unittest.TestCase):
 
     def test_read(self):
@@ -43,7 +44,10 @@ class test_YamlFileReader(unittest.TestCase):
 
         # Создание временного файла и запись данных
         with tempfile.NamedTemporaryFile('w+', suffix='.yml', delete=False, encoding='utf-8') as temp_file:
-            yaml.dump(data, temp_file, default_flow_style=False, allow_unicode=True)
+            yaml.dump(data,
+                      temp_file,
+                      default_flow_style=False,
+                      allow_unicode=True)
             temp_file_name = temp_file.name  # Сохраняем имя файла
 
         with self.assertRaises(ValueError):
@@ -62,7 +66,10 @@ class test_YamlFileReader(unittest.TestCase):
         ]
         # Создание временного файла и запись данных
         with tempfile.NamedTemporaryFile('w+', suffix='.yml', delete=False, encoding='utf-8') as temp_file:
-            yaml.dump(data, temp_file, default_flow_style=False, allow_unicode=True)
+            yaml.dump(data,
+                      temp_file,
+                      default_flow_style=False,
+                      allow_unicode=True)
             temp_file_name = temp_file.name  # Сохраняем имя файла
         with self.assertRaises(ValueError):
             YamlFileReader().read(temp_file_name)
@@ -79,8 +86,13 @@ class test_YamlFileReader(unittest.TestCase):
             }
         ]
         # Создание временного файла и запись данных
-        with tempfile.NamedTemporaryFile('w+', suffix='.yml', delete=False, encoding='utf-8') as temp_file:
-            yaml.dump(data, temp_file, default_flow_style=False, allow_unicode=True)
+        with tempfile.NamedTemporaryFile('w+',
+                                         suffix='.yml',
+                                         delete=False, 
+                                         encoding='utf-8') as temp_file:
+            yaml.dump(data, temp_file,
+                      default_flow_style=False,
+                      allow_unicode=True)
             temp_file_name = temp_file.name  # Сохраняем имя файла
         with self.assertRaises(ValueError):
             YamlFileReader().read(temp_file_name)
