@@ -12,7 +12,9 @@ from YamlFileReader import YamlFileReader
 class test_YamlFileReader(unittest.TestCase):
 
     def test_read(self):
-        result = YamlFileReader().read("data/data.yml")
+        current_dir = os.path.dirname(__file__)
+        file_path = os.path.join(current_dir, '../data/data.yml')
+        result = YamlFileReader().read(file_path)
 
         # Ожидаемый результат
         expected_result = {
