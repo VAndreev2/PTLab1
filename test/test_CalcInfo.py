@@ -5,7 +5,7 @@ sys.path.insert(1, os.path.join(sys.path[0], '../src'))
 from CalcInfo import CalcInfo  # noqa: E402
 
 
-class test_YamlFileReader(unittest.TestCase):
+class test_CalcInfo(unittest.TestCase):
 
     def test_number_negative(self):
         expected_result = {
