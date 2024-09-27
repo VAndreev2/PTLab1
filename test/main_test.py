@@ -2,7 +2,7 @@
 import os
 import sys
 
-sys.path.insert(1, os.path.join(sys.path[0], '../src')) # noqa: E402
+sys.path.insert(1, os.path.join(sys.path[0], '../src'))  # noqa: E402
 from main_src import get_path_from_arguments
 
 import pytest
