@@ -19,7 +19,7 @@ def get_path_from_arguments(args) -> str:
     return args.path
 
 
-def main():
+def main_src():
     path = get_path_from_arguments(sys.argv[1:])
     yaml_reader = YamlFileReader()
     students = yaml_reader.read(path)
