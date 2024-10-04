@@ -4,7 +4,7 @@ import numpy as np
 RatingType = dict[str, float]
 
 
-class CalcInfo:
+class QuartRating:
 
     def __init__(self, ratings: RatingType) -> None:
         self.ratings = ratings
