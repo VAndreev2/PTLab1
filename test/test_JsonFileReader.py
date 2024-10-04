@@ -11,7 +11,9 @@ from JsonFileReader import JsonFileReader
 class test_JsonFileReader(unittest.TestCase):
 
     def test_read(self):
-        result = JsonFileReader().read("../data/data.json")
+        current_dir = os.path.dirname(__file__)
+        file_path = os.path.join(current_dir, '../data/data.json')
+        result = JsonFileReader().read(file_path)
 
         # Ожидаемый результат
         expected_result = {
