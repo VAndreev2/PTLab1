@@ -2,6 +2,7 @@ import os
 import sys
 import unittest
 import tempfile
+import json
 
 sys.path.insert(1, os.path.join(sys.path[0], '../src'))  # noqa: E402
 from JsonFileReader import JsonFileReader
