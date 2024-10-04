@@ -5,9 +5,9 @@ import sys
 
 from CalcRating import CalcRating
 
-from CalcInfo import CalcInfo
+from JsonFileReader import JsonFileReader
 
-from YamlFileReader import YamlFileReader
+from QuartRating import QuartRating
 
 
 def get_path_from_arguments(args) -> str:
@@ -19,17 +19,17 @@ def get_path_from_arguments(args) -> str:
     return args.path
 
 
-def main_src():
+def main():
     path = get_path_from_arguments(sys.argv[1:])
-    yaml_reader = YamlFileReader()
-    students = yaml_reader.read(path)
+    json_reader = JsonFileReader()
+    students = json_reader.read(path)
     print("Students: ", students)
     print(type(students))
     rating = CalcRating(students).calc()
     print("Rating: ", rating)
 
-    calc_high_rating = CalcInfo(students).calc_high_rating()
-    print(calc_high_rating)
+    quart_rating = QuartRating(rating).quart_students()
+    print(quart_rating)
 
 
 if __name__ == "__main__":
