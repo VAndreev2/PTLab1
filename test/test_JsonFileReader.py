@@ -29,7 +29,10 @@ class test_JsonFileReader(unittest.TestCase):
                 }
         }
         # Создание временного файла и запись данных
-        with tempfile.NamedTemporaryFile('w+', suffix='.json', delete=False, encoding='utf-8') as temp_file:
+        with tempfile.NamedTemporaryFile('w+',
+                                         suffix='.json',
+                                         delete=False,
+                                         encoding='utf-8') as temp_file:
             json.dump(data, temp_file, ensure_ascii=False, indent=4)
             temp_file_name = temp_file.name  # Сохраняем имя файла
         try:
@@ -51,7 +54,10 @@ class test_JsonFileReader(unittest.TestCase):
         }
 
         # Создание временного файла и запись данных
-        with tempfile.NamedTemporaryFile('w+', suffix='.json', delete=False, encoding='utf-8') as temp_file:
+        with tempfile.NamedTemporaryFile('w+',
+                                         suffix='.json',
+                                         delete=False,
+                                         encoding='utf-8') as temp_file:
             json.dump(data, temp_file, ensure_ascii=False, indent=4)
             temp_file_name = temp_file.name  # Сохраняем имя файла
         try:
@@ -72,7 +78,10 @@ class test_JsonFileReader(unittest.TestCase):
         }
 
         # Создание временного файла и запись данных
-        with tempfile.NamedTemporaryFile('w+', suffix='.json', delete=False, encoding='utf-8') as temp_file:
+        with tempfile.NamedTemporaryFile('w+',
+                                         suffix='.json',
+                                         delete=False,
+                                         encoding='utf-8') as temp_file:
             json.dump(data, temp_file, ensure_ascii=False, indent=4)
             temp_file_name = temp_file.name  # Сохраняем имя файла
         try:
