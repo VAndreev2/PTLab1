@@ -31,8 +31,8 @@ class JsonFileReader(DataReader):
                 if score > 100 or score < 0:
                     raise ValueError
 
-            students[student] = [(subj, score) 
-                                 for subj, score in 
+            students[student] = [(subj, score)
+                                 for subj, score in
                                  subjects.items()]
 
         return students
