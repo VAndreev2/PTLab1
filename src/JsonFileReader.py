@@ -26,7 +26,8 @@ class JsonFileReader(DataReader):
 
             for subj, score in subjects.items():
                 if not isinstance(subj, str) or not isinstance(score, int):
-                    raise ValueError("Предметы должны быть строками, а оценки - целыми числами.")
+                    raise ValueError("Предметы должны быть строками, "
+                                     "а оценки - целыми числами.")
                 if score > 100 or score < 0:
                     raise ValueError
 
