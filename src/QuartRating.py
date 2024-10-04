@@ -20,7 +20,9 @@ class CalcInfo:
         percentile_75 = np.percentile(ratings_values, 75)
 
         # Определяем студентов, чей рейтинг попадает в последний квартиль
-        last_quartile_students = {name: rating for name, rating in self.ratings.items() if rating >= percentile_75}
+        last_quartile_students = {name: rating 
+                                  for name, rating in self.ratings.items() 
+                                  if rating >= percentile_75}
 
         # Возвращаем список студентов
         return last_quartile_students
