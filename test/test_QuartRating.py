@@ -14,7 +14,6 @@ class test_QuartRating(unittest.TestCase):
         with self.assertRaises(ValueError) as context:
             quart_rating = QuartRating(ratings).quart_students()
 
-
     def test_quart_data(self):
         ratings = {
             "Иванов": 70,
