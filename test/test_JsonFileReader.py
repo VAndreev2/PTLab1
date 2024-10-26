@@ -10,7 +10,6 @@ from JsonFileReader import JsonFileReader # noqa: E402
 
 class test_JsonFileReader(unittest.TestCase):
 
-
     @staticmethod
     def get_path_from_arguments(args) -> str:
         parser = argparse.ArgumentParser()
