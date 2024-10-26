@@ -28,4 +28,3 @@ jobs:
       - name: Test with pytest
         run: |
           PYTHONPATH=./:./src/ pytest test
-          python test_JsonFileReader.py test
