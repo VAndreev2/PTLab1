@@ -27,4 +27,4 @@ jobs:
           pycodestyle src test
       - name: Test with pytest
         run: |
-          PYTHONPATH=./:./src/ pytest test/test_JsonFileReader.py data/data.json
+          PYTHONPATH=./:./src/ pytest test/test_JsonFileReader.py ../data/data.json
