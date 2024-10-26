@@ -14,7 +14,7 @@ class test_JsonFileReader(unittest.TestCase):
     def get_path_from_arguments(args) -> str:
         parser = argparse.ArgumentParser()
         parser.add_argument('filename', nargs='?',
-                            default='/home/user/PTLab1/data/data.json')
+                            default='/data/data.json')
         parser.add_argument('unittest_args', nargs='*')
         args = parser.parse_args(args)
         sys.argv[1:] = args.unittest_args
