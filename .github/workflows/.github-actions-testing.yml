@@ -25,6 +25,7 @@ jobs:
       - name: Lint with pycodestyle
         run: |
           pycodestyle src test
-      - name: Test with pytest
+      - name: Test with pytest and unittest
         run: |
-          PYTHONPATH=./:./src/ pytest test/test_JsonFileReader.py
+          PYTHONPATH=./:./src/ pytest
+          python test/test_JsonFileReader.py
