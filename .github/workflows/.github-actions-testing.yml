@@ -25,7 +25,8 @@ jobs:
       - name: Lint with pycodestyle
         run: |
           pycodestyle src test
-      - name: Test with pytest and unittest
+      - name: Test with pytest
         run: |
           PYTHONPATH=./:./src/ pytest
-          python test/test_JsonFileReader.py --data-path /home/user/PTLab1/data/data.json
+      - name: Test with unittest
+          python test/test_JsonFileReader.py
