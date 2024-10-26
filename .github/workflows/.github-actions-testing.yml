@@ -28,4 +28,4 @@ jobs:
       - name: Test with pytest and unittest
         run: |
           PYTHONPATH=./:./src/ pytest
-          python test/test_JsonFileReader.py /home/user/PTLab1/data/data.json
+          python test/test_JsonFileReader.py --data-path /home/user/PTLab1/data/data.json
