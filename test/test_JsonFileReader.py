@@ -6,7 +6,7 @@ import unittest
 import tempfile
 
 sys.path.insert(1, os.path.join(sys.path[0], '../src'))
-from JsonFileReader import JsonFileReader
+from JsonFileReader import JsonFileReader # noqa: E402
 
 
 class test_JsonFileReader(unittest.TestCase):
