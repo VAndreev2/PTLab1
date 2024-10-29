@@ -30,4 +30,4 @@ jobs:
           PYTHONPATH=./:./src/ pytest
       - name: Test with unittest
         run: |
-          python test/test_JsonFileReader.py
+          python test/test_JsonFileReader.py "data.json"
