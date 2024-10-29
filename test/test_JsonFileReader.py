@@ -42,7 +42,7 @@ class test_JsonFileReader(unittest.TestCase):
         if len(sys.argv) > 1 and not sys.argv[1].startswith('test_'):
             path = self.get_path_from_arguments(sys.argv[1:])
         else:
-            path = '../data/data.json'  # Путь по умолчанию
+            path = 'data.json'  # Путь по умолчанию
         # Ожидаемый результат
         expected_result = {
             'Иванов Иван Иванович': [('математика', 67),
