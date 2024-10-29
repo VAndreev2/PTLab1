@@ -45,7 +45,7 @@ class test_JsonFileReader(unittest.TestCase):
         else:
             if env == 'GITHUB':
                 # Путь для GitHub
-                path = '/data/data.json'  # Абсолютный путь
+                path = 'data/data.json'  # Абсолютный путь
             else:
                 path = "../data/data.json"
         # Ожидаемый результат
