@@ -38,11 +38,16 @@ class test_JsonFileReader(unittest.TestCase):
                 os.remove(temp_file_name)
 
     def test_read(self):
+        env = os.getenv('ENV', 'PYCHARM')
         # Проверяем, есть ли аргументы командной строки
         if len(sys.argv) > 1 and not sys.argv[1].startswith('test_'):
             path = self.get_path_from_arguments(sys.argv[1:])
         else:
-            path = 'data/data.json'  # Путь по умолчанию
+            if env == 'GITHUB':
+                # Путь для GitHub
+                path = '/data/data.json'  # Абсолютный путь
+            else:
+                path = "../data/data.json"
         # Ожидаемый результат
         expected_result = {
             'Иванов Иван Иванович': [('математика', 67),
