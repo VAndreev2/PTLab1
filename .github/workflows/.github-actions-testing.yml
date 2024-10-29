@@ -26,5 +26,7 @@ jobs:
         run: |
           pycodestyle src test
       - name: Test with pytest
+        env:
+          ENV: "GITHUB"
         run: |
-          PYTHONPATH=./:./src/ pytest test
+          PYTHONPATH=./:./src/ pytest
